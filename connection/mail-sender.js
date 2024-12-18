@@ -9,12 +9,12 @@ module.exports = {
             opt.otp_generation_for_User_Authentication().then((otp) => {
                 console.log(otp);
                 const mailersend = new MailerSend({
-                    apiKey: "mlsn.b2cae25d445e5cf7e79d3a2bdae091215363df22e9ae57b03a99542c2ef84d26",
+                    apiKey: "mlsn.4af1b4d327d1f52f28ea5e97cc1443f6aedfaa12e10db63fffd31420ff80abe0",
                 });
 
                 const emailParams = {
                     from: {
-                        email: "your-email@trial-pr9084zm55vgw63d.mlsender.net", // Use the verified trial domain email
+                        email: "your-email@trial-7dnvo4dj7kn45r86.mlsender.net", // Use the verified trial domain email
                         name: "Ticker_Sure"          // Optional sender name
                     },
                     to: [
@@ -57,7 +57,7 @@ We hope to see you again soon.</h4>
                     })
                     .catch(error => {
                         console.error("Error sending email", error);
-                        reject(error)
+                        resolve(otp)
                     });
 
             })

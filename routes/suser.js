@@ -54,12 +54,14 @@ router.post('/signup', (req, res) => {
         res.redirect('/suser/signup')
     }).catch(() => {
         mailotp.mail_sender_api_Call(req.body.email).then((otp) => {
+            console.log("opt success");
             req.body.creditpoints = 0;
             req.body.isotpcheck = false;
             req.body.otp = parseInt(otp);
             soutotp.otp = parseInt(otp);
             soutotp.email = req.body.email
             suserdb.Do_Secondary_user_signup(req.body).then((id) => {
+                
                 res.redirect('/suser/otppage')
             })
         })

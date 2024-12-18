@@ -1,5 +1,5 @@
 module.exports=
 {
-    //localurl:"http://localhost:3000",
-    localurl : "https://43db-103-149-158-254.ngrok-free.app"
+    localurl:"http://localhost:3000",
+    //localurl : "https://395a-103-42-199-173.ngrok-free.app/"
 }
